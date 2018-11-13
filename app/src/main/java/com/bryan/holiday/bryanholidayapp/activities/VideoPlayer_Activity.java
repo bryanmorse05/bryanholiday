@@ -1,4 +1,4 @@
-package com.bryan.holiday.bryanholidayapp;
+package com.bryan.holiday.bryanholidayapp.activities;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-public class VideoPlayer extends Activity {
+import com.bryan.holiday.bryanholidayapp.R;
+
+public class VideoPlayer_Activity extends Activity {
 
     VideoView videoPlayer;
+    String videoID;
     static final String API_KEY = "AIzaSyAcgQS6g5TSZEgBf0eJHxFHapOfVr5YHm4";
 //    static final String VIDEO_ID = "1kdILXNfaF7kDSgGcbDKBnlnjaxYB-psS";       //Garfield
     static final String VIDEO_ID = "1HROp9nn3JZvyP_dub23ieHoARSiirNnG";         //Peanuts
@@ -21,8 +24,10 @@ public class VideoPlayer extends Activity {
 
         videoPlayer = findViewById(R.id.videoPlayer);
 
-        //This is to download and then play the video in a VideoPlayer
-        String videoLink = "https://www.googleapis.com/drive/v3/files/" + VIDEO_ID + "?key=" + API_KEY + "&alt=media";
+        videoID = getIntent().getExtras().getString("video_id");
+
+        //This is to download and then play the video in a VideoPlayer_Activity
+        String videoLink = "https://www.googleapis.com/drive/v3/files/" + videoID + "?key=" + API_KEY + "&alt=media";
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoPlayer);
         videoPlayer.setMediaController(mediaController);
