@@ -23,7 +23,7 @@ public class Video_Activity extends AppCompatActivity {
 
     RecyclerView videoRecyclerView;
     VideoRecyclerAdapter adapter;
-    GridLayoutManager gridLayoutManager;
+    GridLayoutManager gridLayoutManager;    //2x2
 
     ArrayList<VideoModel> videoModelArrayList;
 

@@ -5,6 +5,8 @@
     android:id="@+id/videoLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Comment -->
+
     <TextView
         android:id="@+id/videoName"
         android:layout_width="wrap_content"
