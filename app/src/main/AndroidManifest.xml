@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity"
+            android:screenOrientation="userLandscape"
+            android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +27,13 @@
             android:screenOrientation="landscape">
 
         </activity>
-        <activity android:name=".activities.Video_Activity"
+        <activity
+            android:name=".activities.Video_Activity"
+            android:parentActivityName=".activities.MainActivity">
+
+        </activity>
+        <activity android:name=".activities.YuleLog_Activity"
+            android:screenOrientation="userLandscape"
             android:parentActivityName=".activities.MainActivity">
 
         </activity>
