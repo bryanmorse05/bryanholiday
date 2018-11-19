@@ -1,15 +1,17 @@
 package com.bryan.holiday.bryanholidayapp.activities;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
 import com.bryan.holiday.bryanholidayapp.R;
 
-public class VideoPlayer_Activity extends Activity {
+public class VideoPlayer_Activity extends AppCompatActivity {
 
     VideoView videoPlayer;
     String videoID;
@@ -33,5 +35,13 @@ public class VideoPlayer_Activity extends Activity {
         videoPlayer.setMediaController(mediaController);
         videoPlayer.setVideoURI(Uri.parse(videoLink));
         videoPlayer.start();
+
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+        // Remember that you should never show the action bar if the
+        // status bar is hidden, so hide that too if necessary.
+        getSupportActionBar().hide();
     }
 }

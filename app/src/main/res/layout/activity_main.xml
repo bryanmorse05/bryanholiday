@@ -9,13 +9,16 @@
     <ImageView
         android:id="@+id/titleScreenImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
 
     <Button
         android:id="@+id/videoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:text="Videos"
+        android:background="@drawable/snowflake"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@id/yuleLogButton"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/musicButton"
@@ -23,9 +26,11 @@
 
     <Button
         android:id="@+id/musicButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:text="Music"
+        android:background="@drawable/snowflake"
+        android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/soundBoardButton"
         app:layout_constraintLeft_toRightOf="@id/videoButton"
@@ -33,9 +38,11 @@
 
     <Button
         android:id="@+id/yuleLogButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:text="Yule Log"
+        android:background="@drawable/snowflake"
+        android:scaleType="fitXY"
         app:layout_constraintTop_toBottomOf="@id/videoButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -43,9 +50,11 @@
 
     <Button
         android:id="@+id/soundBoardButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:text="Sound Board"
+        android:background="@drawable/snowflake"
+        android:scaleType="fitXY"
         app:layout_constraintTop_toBottomOf="@id/musicButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/yuleLogButton"

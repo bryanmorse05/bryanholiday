@@ -1,6 +1,5 @@
 package com.bryan.holiday.bryanholidayapp.activities;
 
-import android.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,11 +18,11 @@ public class YuleLog_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_yule_log_);
 
         View decorView = getWindow().getDecorView();
-// Hide the status bar.
+        // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
-// Remember that you should never show the action bar if the
-// status bar is hidden, so hide that too if necessary.
+        // Remember that you should never show the action bar if the
+        // status bar is hidden, so hide that too if necessary.
         getSupportActionBar().hide();
 
         yuleLog = findViewById(R.id.yuleLogImage);

@@ -6,7 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".activities.Video_Activity">
 
-    <!-- comment -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorXMasGreen"
+        android:scaleType="fitXY"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/videoRecyclerView"

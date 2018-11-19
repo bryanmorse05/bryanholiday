@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bryan.holiday.bryanholidayapp.R;
@@ -11,6 +12,7 @@ import com.bryan.holiday.bryanholidayapp.adapters.VideoRecyclerAdapter;
 import com.bryan.holiday.bryanholidayapp.models.VideoModel;
 import com.bryan.holiday.bryanholidayapp.retrofit.RetrofitInstance;
 import com.bryan.holiday.bryanholidayapp.retrofit.RetrofitVideosAPI;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,7 @@ public class Video_Activity extends AppCompatActivity {
     RecyclerView videoRecyclerView;
     VideoRecyclerAdapter adapter;
     GridLayoutManager gridLayoutManager;    //2x2
+//    ImageView backgroundImage;
 
     ArrayList<VideoModel> videoModelArrayList;
 
@@ -37,6 +40,9 @@ public class Video_Activity extends AppCompatActivity {
         getSupportActionBar().setTitle("Movies");
 
         videoModelArrayList = new ArrayList<>();
+
+//        backgroundImage = findViewById(R.id.backgroundImage);
+//        Glide.with(backgroundImage).load(R.drawable.fireplace).into(backgroundImage);
 
         videoRecyclerView = findViewById(R.id.videoRecyclerView);
         videoRecyclerView.setHasFixedSize(false);

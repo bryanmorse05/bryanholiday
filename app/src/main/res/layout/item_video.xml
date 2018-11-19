@@ -3,24 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:id="@+id/videoLayout"
+    android:padding="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Comment -->
+
+    <ImageView
+        android:id="@+id/xmasboxImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/xmasbox"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/videoName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"
+        android:textColor="@color/colorBlack"
+        android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/videoImage"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
         android:id="@+id/videoImage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="130dp"
         app:layout_constraintTop_toBottomOf="@id/videoName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

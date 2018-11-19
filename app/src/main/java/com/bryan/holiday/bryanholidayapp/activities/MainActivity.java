@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.bryan.holiday.bryanholidayapp.R;
@@ -13,7 +14,7 @@ import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button videoButton, yuleLogButton;
+    Button videoButton, yuleLogButton, soundBoardButton;
     ImageView titleScreenImage;
 
     @Override
@@ -23,10 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
         videoButton = findViewById(R.id.videoButton);
         yuleLogButton = findViewById(R.id.yuleLogButton);
+        soundBoardButton = findViewById(R.id.soundBoardButton);
         titleScreenImage = findViewById(R.id.titleScreenImage);
 
-        final MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.christmas_time_is_here_vocal);
-        mediaPlayer.start();
+//        final MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.christmas_time_is_here_vocal);
+//        mediaPlayer.start();
 
         videoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), YuleLog_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        soundBoardButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SoundBoard_Activity.class);
                 startActivity(intent);
             }
         });
