@@ -37,11 +37,36 @@ public class Music_Activity extends AppCompatActivity {
         getSupportActionBar().setTitle("Music");
     }
 
+    //Let's add them songs!
     private void populateMusicData() {
         SongModel song = new SongModel("Christmas Time is Here", "Vince Guaraldi Trio", R.raw.christmas_time_is_here_vocal);
         songModelList.add(song);
 
         song = new SongModel("The Cowboy's Christmas Ball", "The Killers", R.raw.the_cowboys_christmas_ball);
+        songModelList.add(song);
+
+        song = new SongModel("The Snowman Soundtrack", "Bernard Cribbins", R.raw.the_snowman_soundtrack);
+        songModelList.add(song);
+
+        song = new SongModel("Walking in the Air", "Bernard Cribbins", R.raw.walking_in_the_air);
+        songModelList.add(song);
+
+        song = new SongModel("The Snowman Soundtrack Continued", "Bernard Cribbins", R.raw.the_snowman_soundtrack_pt2);
+        songModelList.add(song);
+
+        song = new SongModel("Do They Know it's Christmas?", "Band Aid", R.raw.do_they_know_its_christmas);
+        songModelList.add(song);
+
+        song = new SongModel("Do They Know it's Christmas? Ext", "Band Aid", R.raw.do_they_know_its_christmas_ext);
+        songModelList.add(song);
+
+        song = new SongModel("Thanksgiving", "George Winston", R.raw.thanksgiving);
+        songModelList.add(song);
+
+        song = new SongModel("Carol of the Bells", "George Winston", R.raw.carol_of_the_bells);
+        songModelList.add(song);
+
+        song = new SongModel("Variations on the Kanon", "George Winston", R.raw.variations_on_the_kanon_by_pachelbel);
         songModelList.add(song);
     }
 }

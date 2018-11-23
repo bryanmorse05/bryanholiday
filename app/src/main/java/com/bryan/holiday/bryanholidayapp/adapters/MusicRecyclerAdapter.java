@@ -1,7 +1,6 @@
 package com.bryan.holiday.bryanholidayapp.adapters;
 
 import android.content.Context;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -14,7 +13,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.bryan.holiday.bryanholidayapp.R;
-import com.bryan.holiday.bryanholidayapp.activities.Music_Activity;
 import com.bryan.holiday.bryanholidayapp.models.SongModel;
 
 import java.io.IOException;
@@ -64,21 +62,25 @@ public class MusicRecyclerAdapter extends RecyclerView.Adapter<MusicRecyclerAdap
         TextView songArtist = myViewHolder.songArtist;
         songArtist.setText(songModel.getSongArtist());
 
+
+
         myViewHolder.playButton.setOnClickListener(new View.OnClickListener() {
+
 
             @Override
             public void onClick(View view) {
+
+
                 if (mediaPlayer.isPlaying()) {
                     mediaPlayer.pause();
+                    mediaPlayer.reset();
                 }
                 else {
                     try {
-
                         MediaPlayer.create(context, songModel.getSongTrack());
                         Uri uri = Uri.parse("android.resource://" + context.getPackageName() + "/" + songModel.getSongTrack());
                         mediaPlayer.setDataSource(context, uri);
                         mediaPlayer.prepare();
-
                         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                             @Override
                             public void onPrepared(MediaPlayer mediaPlayer) {
