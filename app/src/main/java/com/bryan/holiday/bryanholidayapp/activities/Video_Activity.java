@@ -26,7 +26,7 @@ public class Video_Activity extends AppCompatActivity {
     RecyclerView videoRecyclerView;
     VideoRecyclerAdapter adapter;
     GridLayoutManager gridLayoutManager;    //2x2
-//    ImageView backgroundImage;
+    ImageView backgroundImage;
 
     ArrayList<VideoModel> videoModelArrayList;
 
@@ -41,8 +41,8 @@ public class Video_Activity extends AppCompatActivity {
 
         videoModelArrayList = new ArrayList<>();
 
-//        backgroundImage = findViewById(R.id.backgroundImage);
-//        Glide.with(backgroundImage).load(R.drawable.fireplace).into(backgroundImage);
+        backgroundImage = findViewById(R.id.backgroundImage);
+        Glide.with(backgroundImage).load(R.drawable.christmas_tree_background).into(backgroundImage);
 
         videoRecyclerView = findViewById(R.id.videoRecyclerView);
         videoRecyclerView.setHasFixedSize(false);

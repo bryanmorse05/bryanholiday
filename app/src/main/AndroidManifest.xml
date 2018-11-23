@@ -38,8 +38,14 @@
             android:screenOrientation="userLandscape">
 
         </activity>
-        <activity android:name=".activities.SoundBoard_Activity"
+        <activity
+            android:name=".activities.SoundBoard_Activity"
             android:parentActivityName=".activities.MainActivity">
+
+        </activity>
+        <activity android:name=".activities.Music_Activity"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait">
 
         </activity>
     </application>

@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button videoButton, yuleLogButton, soundBoardButton;
+    Button videoButton, yuleLogButton, musicButton, soundBoardButton;
     ImageView titleScreenImage;
 
     @Override
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         videoButton = findViewById(R.id.videoButton);
         yuleLogButton = findViewById(R.id.yuleLogButton);
         soundBoardButton = findViewById(R.id.soundBoardButton);
+        musicButton = findViewById(R.id.musicButton);
         titleScreenImage = findViewById(R.id.titleScreenImage);
 
 //        final MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.christmas_time_is_here_vocal);
@@ -46,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        musicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Music_Activity.class);
+                startActivity(intent);
+            }
+        });
+
         soundBoardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Glide.with(titleScreenImage).load(R.drawable.original).into(titleScreenImage);
+        Glide.with(titleScreenImage).load(R.drawable.snowman_snowing).into(titleScreenImage);
 
     }
 }
