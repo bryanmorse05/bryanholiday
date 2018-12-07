@@ -14,4 +14,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ChristmasGoldAppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorXMasSilver</item>
+        <item name="colorPrimaryDark">@color/colorXMasGold</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorForestGreen</item>
+    </style>
+
 </resources>

@@ -1,18 +1,16 @@
 package com.bryan.holiday.bryanholidayapp.activities;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.bryan.holiday.bryanholidayapp.R;
 import com.bumptech.glide.Glide;
 
-public class MainActivity extends AppCompatActivity {
+public class HomePage_Activity extends AppCompatActivity {
 
     Button videoButton, yuleLogButton, musicButton, soundBoardButton;
     ImageView titleScreenImage;
@@ -20,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_homepage);
 
         videoButton = findViewById(R.id.videoButton);
         yuleLogButton = findViewById(R.id.yuleLogButton);

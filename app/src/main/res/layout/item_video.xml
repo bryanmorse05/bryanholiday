@@ -19,20 +19,22 @@
         android:id="@+id/videoName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textColor="@color/colorBlack"
+        android:background="@color/colorWhite"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="35dp"/>
 
     <ImageView
         android:id="@+id/videoImage"
-        android:layout_width="wrap_content"
-        android:layout_height="130dp"
-        app:layout_constraintTop_toBottomOf="@id/videoName"
+        android:layout_width="80dp"
+        android:layout_height="110dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="3dp"/>
 
 </android.support.constraint.ConstraintLayout>

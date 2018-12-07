@@ -11,10 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/ChristmasAppTheme"
+        android:theme="@style/ChristmasGoldAppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.HomePage_Activity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +29,7 @@
         </activity>
         <activity
             android:name=".activities.Video_Activity"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName=".activities.HomePage_Activity"
             android:screenOrientation="portrait">
 
         </activity>
@@ -40,11 +40,11 @@
         </activity>
         <activity
             android:name=".activities.SoundBoard_Activity"
-            android:parentActivityName=".activities.MainActivity">
+            android:parentActivityName=".activities.HomePage_Activity">
 
         </activity>
         <activity android:name=".activities.Music_Activity"
-            android:parentActivityName=".activities.MainActivity"
+            android:parentActivityName=".activities.HomePage_Activity"
             android:screenOrientation="portrait">
 
         </activity>

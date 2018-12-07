@@ -8,4 +8,8 @@
     <color name="colorTransparent">#00000000</color>
     <color name="colorXMasGreen">#3C8D0D</color>
     <color name="colorXMasRed">#EB3232</color>
+    <color name="colorXMasSilver">#E1DFDF</color>
+    <color name="colorXMasGold">#E5D08F</color>
+    <color name="colorForestGreen">#4A6741</color>
+    <color name="colorDarkGold">#A67C00</color>
 </resources>
