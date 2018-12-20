@@ -43,10 +43,14 @@
             android:parentActivityName=".activities.HomePage_Activity">
 
         </activity>
-        <activity android:name=".activities.Music_Activity"
+        <activity
+            android:name=".activities.Music_Activity"
             android:parentActivityName=".activities.HomePage_Activity"
             android:screenOrientation="portrait">
-
+            
+        </activity>
+        <activity android:name=".activities.MusicPlayer_Activity"
+            android:theme="@style/MusicPlayerTheme">
         </activity>
     </application>
 

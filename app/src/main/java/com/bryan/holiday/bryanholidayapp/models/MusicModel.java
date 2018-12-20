@@ -1,6 +1,6 @@
 package com.bryan.holiday.bryanholidayapp.models;
 
-public class SongModel {
+public class MusicModel {
     String songName;
     String songArtist;
     Integer songTime;
@@ -56,9 +56,11 @@ public class SongModel {
         this.songTrack = songTrack;
     }
 
-    public SongModel(String name, String artist, Integer track) {
+    public MusicModel(String name, String artist, String album, Integer art, Integer track) {
         this.songName = name;
         this.songArtist = artist;
+        this.songAlbum = album;
+        this.songAlbumArt = art;
         this.songTrack = track;
     }
 }

@@ -6,6 +6,7 @@ public class SoundModel {
 
     Integer soundFile;
     Integer soundPicture;
+    String soundTitle;
 
     public Integer getSoundFile() {
         return soundFile;
@@ -23,9 +24,18 @@ public class SoundModel {
         this.soundPicture = soundPicture;
     }
 
-    public SoundModel(Integer soundFile, Integer soundPicture) {
+    public String getSoundTitle() {
+        return soundTitle;
+    }
+
+    public void setSoundTitle(String soundTitle) {
+        this.soundTitle = soundTitle;
+    }
+
+    public SoundModel(Integer soundFile, Integer soundPicture, String soundTitle) {
         this.soundFile = soundFile;
         this.soundPicture = soundPicture;
+        this.soundTitle = soundTitle;
     }
 
 }

@@ -2,10 +2,8 @@ package com.bryan.holiday.bryanholidayapp.adapters;
 
 import android.content.Context;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +12,7 @@ import android.widget.TextView;
 
 import com.bryan.holiday.bryanholidayapp.R;
 import com.bryan.holiday.bryanholidayapp.models.SoundModel;
-import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
 import java.util.List;
 
 public class SoundBoardRecyclerAdapter extends RecyclerView.Adapter<SoundBoardRecyclerAdapter.MyViewHolder> {
@@ -27,11 +23,13 @@ public class SoundBoardRecyclerAdapter extends RecyclerView.Adapter<SoundBoardRe
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public Button soundBoardButton;
+        public TextView soundBoardTitle;
 
         public MyViewHolder(View view) {
             super(view);
             context = itemView.getContext();
             soundBoardButton = itemView.findViewById(R.id.soundBoardButton);
+            soundBoardTitle = itemView.findViewById(R.id.soundBoardTitle);
             mediaPlayer = new MediaPlayer();
         }
     }
@@ -52,48 +50,28 @@ public class SoundBoardRecyclerAdapter extends RecyclerView.Adapter<SoundBoardRe
 
         final SoundModel soundModel = soundModelList.get(position);
 
+        TextView soundBoardTitle = myViewHolder.soundBoardTitle;
+        soundBoardTitle.setText(soundModel.getSoundTitle());
+
         Button soundBoardButton = myViewHolder.soundBoardButton;
         soundBoardButton.setBackgroundResource(soundModel.getSoundPicture());
 
         myViewHolder.soundBoardButton.setOnClickListener(new View.OnClickListener() {
-
-
             @Override
-            public void onClick(View view) {
-
+            public void onClick(View v) {
 
                 if (mediaPlayer.isPlaying()) {
                     mediaPlayer.pause();
-                    mediaPlayer.reset();
+                    mediaPlayer.release();
                 }
-                else {
-                    try {
-                        MediaPlayer.create(context, soundModel.getSoundFile());
-                        Uri uri = Uri.parse("android.resource://" + context.getPackageName() + "/" + soundModel.getSoundFile());
-                        mediaPlayer.setDataSource(context, uri);
-                        mediaPlayer.prepare();
-                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                            @Override
-                            public void onPrepared(MediaPlayer mediaPlayer) {
-
-                                mediaPlayer.start();
-                            }
-                        });
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
+                mediaPlayer = MediaPlayer.create(context, soundModel.getSoundFile());
+                mediaPlayer.start();
             }
         });
-
-
-
     }
 
     @Override
     public int getItemCount() {
         return soundModelList.size();
     }
-
-
 }

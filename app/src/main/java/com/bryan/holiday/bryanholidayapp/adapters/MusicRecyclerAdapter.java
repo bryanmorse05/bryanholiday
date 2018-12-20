@@ -1,70 +1,89 @@
 package com.bryan.holiday.bryanholidayapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bryan.holiday.bryanholidayapp.R;
-import com.bryan.holiday.bryanholidayapp.models.SongModel;
+import com.bryan.holiday.bryanholidayapp.activities.MusicPlayer_Activity;
+import com.bryan.holiday.bryanholidayapp.models.MusicModel;
+import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
 import java.util.List;
 
 public class MusicRecyclerAdapter extends RecyclerView.Adapter<MusicRecyclerAdapter.MyViewHolder> {
 
     Context context;
-    private List<SongModel> songModelList;
-    MediaPlayer mediaPlayer;
+    private List<MusicModel> musicModelList;
+//    MediaPlayer mediaPlayer;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView songName;
         public TextView songArtist;
-        public Button playButton;
+        public TextView songAlbum;
+        public ImageView albumArt;
+        public ConstraintLayout musicCellLayout;
 
         public MyViewHolder(View view) {
             super(view);
             songName = view.findViewById(R.id.songName);
             songArtist = view.findViewById(R.id.songArtist);
+            songAlbum = view.findViewById(R.id.songAlbum);
             context = itemView.getContext();
-            playButton = view.findViewById(R.id.playButton);
-            mediaPlayer = new MediaPlayer();
+            albumArt = view.findViewById(R.id.albumArt);
+            musicCellLayout = view.findViewById(R.id.musicCellLayout);
+//            mediaPlayer = new MediaPlayer();
         }
     }
 
-    public MusicRecyclerAdapter(List<SongModel> songModelList) {
-        this.songModelList = songModelList;
+    public MusicRecyclerAdapter(List<MusicModel> musicModelList) {
+        this.musicModelList = musicModelList;
     }
 
     @NonNull
     @Override
     public MusicRecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_song, viewGroup, false);
+        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_music, viewGroup, false);
         return new MusicRecyclerAdapter.MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MusicRecyclerAdapter.MyViewHolder myViewHolder, int position) {
 
-        final SongModel songModel = songModelList.get(position);
+        final MusicModel musicModel = musicModelList.get(position);
 
         TextView songName = myViewHolder.songName;
-        songName.setText(songModel.getSongName());
+        songName.setText(musicModel.getSongName());
 
         TextView songArtist = myViewHolder.songArtist;
-        songArtist.setText(songModel.getSongArtist());
+        songArtist.setText(musicModel.getSongArtist());
 
+        TextView songAlbum = myViewHolder.songAlbum;
+        songAlbum.setText(musicModel.getSongAlbum());
 
+        Picasso.with(context).load(musicModel.getSongAlbumArt()).into(myViewHolder.albumArt);
 
-        myViewHolder.playButton.setOnClickListener(new View.OnClickListener() {
+        myViewHolder.musicCellLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, MusicPlayer_Activity.class);
+                intent.putExtra("Song", musicModel.getSongTrack());
+                intent.putExtra("AlbumArt", musicModel.getSongAlbumArt());
+                context.startActivity(intent);
+            }
+        });
+
+        /*myViewHolder.playButton.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
@@ -95,10 +114,12 @@ public class MusicRecyclerAdapter extends RecyclerView.Adapter<MusicRecyclerAdap
                 }
             }
         });
+        */
     }
 
     @Override
     public int getItemCount() {
-        return songModelList.size();
+        return musicModelList.size();
     }
+
 }

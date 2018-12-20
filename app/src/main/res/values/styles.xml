@@ -20,5 +20,12 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/colorForestGreen</item>
     </style>
+    
+    <style name="MusicPlayerTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="colorAccent">@color/colorXMasGreen</item>
+
+    </style>
 
 </resources>

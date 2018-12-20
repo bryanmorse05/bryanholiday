@@ -7,14 +7,14 @@ import android.support.v7.widget.RecyclerView;
 
 import com.bryan.holiday.bryanholidayapp.R;
 import com.bryan.holiday.bryanholidayapp.adapters.MusicRecyclerAdapter;
-import com.bryan.holiday.bryanholidayapp.models.SongModel;
+import com.bryan.holiday.bryanholidayapp.models.MusicModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Music_Activity extends AppCompatActivity {
 
-    private List<SongModel> songModelList = new ArrayList<>();
+    private List<MusicModel> musicModelList = new ArrayList<>();
     private RecyclerView recyclerView;
     private MusicRecyclerAdapter mAdapter;
 
@@ -26,7 +26,7 @@ public class Music_Activity extends AppCompatActivity {
         recyclerView = findViewById(R.id.musicRecyclcerView);
         recyclerView.setHasFixedSize(false);
 
-        mAdapter = new MusicRecyclerAdapter(songModelList);
+        mAdapter = new MusicRecyclerAdapter(musicModelList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mAdapter);
@@ -38,35 +38,36 @@ public class Music_Activity extends AppCompatActivity {
     }
 
     //Let's add them songs!
+    //One More Sleep 'til Christmas, and Last Christmas by JEW.  Maybe something Richard Cheesey. That Christmas Feeling.
     private void populateMusicData() {
-        SongModel song = new SongModel("Christmas Time is Here", "Vince Guaraldi Trio", R.raw.christmas_time_is_here_vocal);
-        songModelList.add(song);
+        MusicModel song = new MusicModel("Christmas Time is Here", "Vince Guaraldi Trio", "A Charlie Brown Chrismtas", R.drawable.cbc_cover, R.raw.christmas_time_is_here_vocal);
+        musicModelList.add(song);
 
-        song = new SongModel("The Cowboy's Christmas Ball", "The Killers", R.raw.the_cowboys_christmas_ball);
-        songModelList.add(song);
+        song = new MusicModel("The Cowboy's Christmas Ball", "The Killers", "(Red) Christmas EP", R.drawable.killers_cover, R.raw.the_cowboys_christmas_ball);
+        musicModelList.add(song);
 
-        song = new SongModel("The Snowman Soundtrack", "Bernard Cribbins", R.raw.the_snowman_soundtrack);
-        songModelList.add(song);
+        song = new MusicModel("The Snowman Soundtrack", "Bernard Cribbins", "The Snowman", R.drawable.snowman_cover, R.raw.the_snowman_soundtrack);
+        musicModelList.add(song);
 
-        song = new SongModel("Walking in the Air", "Bernard Cribbins", R.raw.walking_in_the_air);
-        songModelList.add(song);
+        song = new MusicModel("Walking in the Air", "Bernard Cribbins", "The Snowman", R.drawable.snowman_cover, R.raw.walking_in_the_air);
+        musicModelList.add(song);
 
-        song = new SongModel("The Snowman Soundtrack Continued", "Bernard Cribbins", R.raw.the_snowman_soundtrack_pt2);
-        songModelList.add(song);
+        song = new MusicModel("The Snowman Soundtrack Continued", "Bernard Cribbins", "The Snowman", R.drawable.snowman_cover, R.raw.the_snowman_soundtrack_pt2);
+        musicModelList.add(song);
 
-        song = new SongModel("Do They Know it's Christmas?", "Band Aid", R.raw.do_they_know_its_christmas);
-        songModelList.add(song);
+        song = new MusicModel("Do They Know it's Christmas?", "Band Aid", "Do They Know It's Christmas?", R.drawable.bandaid_cover, R.raw.do_they_know_its_christmas);
+        musicModelList.add(song);
 
-        song = new SongModel("Do They Know it's Christmas? Ext", "Band Aid", R.raw.do_they_know_its_christmas_ext);
-        songModelList.add(song);
+        song = new MusicModel("Do They Know it's Christmas? Ext", "Band Aid", "Do They Know It's Christmas?", R.drawable.bandaid_cover, R.raw.do_they_know_its_christmas_ext);
+        musicModelList.add(song);
 
-        song = new SongModel("Thanksgiving", "George Winston", R.raw.thanksgiving);
-        songModelList.add(song);
+        song = new MusicModel("Thanksgiving", "George Winston", "December", R.drawable.december_cover, R.raw.thanksgiving);
+        musicModelList.add(song);
 
-        song = new SongModel("Carol of the Bells", "George Winston", R.raw.carol_of_the_bells);
-        songModelList.add(song);
+        song = new MusicModel("Carol of the Bells", "George Winston", "December", R.drawable.december_cover, R.raw.carol_of_the_bells);
+        musicModelList.add(song);
 
-        song = new SongModel("Variations on the Kanon", "George Winston", R.raw.variations_on_the_kanon_by_pachelbel);
-        songModelList.add(song);
+        song = new MusicModel("Variations on the Kanon", "George Winston", "December", R.drawable.december_cover, R.raw.variations_on_the_kanon_by_pachelbel);
+        musicModelList.add(song);
     }
 }

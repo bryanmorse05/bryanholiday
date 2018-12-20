@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorXMasRed"
+    tools:context=".activities.MusicPlayer_Activity">
+
+    <ImageView
+        android:id="@+id/musicPlayerAlbumArt"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/default_music"
+        tools:ignore="ContentDescription"/>
+
+    <SeekBar
+        android:id="@+id/musicPlayerSeekBar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/musicPlayerAlbumArt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/timeElapsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/musicPlayerSeekBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="45dp"/>
+
+    <TextView
+        android:id="@+id/timeRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/musicPlayerSeekBar"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="40dp"/>
+
+    <Button
+        android:id="@+id/musicPlayerPlayButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/musicPlayerSeekBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/greenplay"/>
+
+    <SeekBar
+        android:id="@+id/musicPlayerVolumeBar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:progress="50"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/musicPlayerPlayButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <ImageView
+        android:id="@+id/musicPlayerVolumeDown"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="@id/musicPlayerVolumeBar"
+        app:layout_constraintBottom_toBottomOf="@id/musicPlayerVolumeBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/musicPlayerVolumeBar"
+        android:src="@drawable/green_vol_low"/>
+
+    <ImageView
+        android:id="@+id/musicPlayerVolumeUp"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        app:layout_constraintTop_toTopOf="@id/musicPlayerVolumeBar"
+        app:layout_constraintBottom_toBottomOf="@id/musicPlayerVolumeBar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/musicPlayerVolumeBar"
+        android:src="@drawable/green_vol_high"/>
+
+</android.support.constraint.ConstraintLayout>
