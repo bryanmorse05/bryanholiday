@@ -38,7 +38,7 @@ public class Music_Activity extends AppCompatActivity {
     }
 
     //Let's add them songs!
-    //One More Sleep 'til Christmas, and Last Christmas by JEW.  Maybe something Richard Cheesey. That Christmas Feeling.
+    //Maybe something Richard Cheesey.
     private void populateMusicData() {
         MusicModel song = new MusicModel("Christmas Time is Here", "Vince Guaraldi Trio", "A Charlie Brown Chrismtas", R.drawable.cbc_cover, R.raw.christmas_time_is_here_vocal);
         musicModelList.add(song);
@@ -58,7 +58,7 @@ public class Music_Activity extends AppCompatActivity {
         song = new MusicModel("Do They Know it's Christmas?", "Band Aid", "Do They Know It's Christmas?", R.drawable.bandaid_cover, R.raw.do_they_know_its_christmas);
         musicModelList.add(song);
 
-        song = new MusicModel("Do They Know it's Christmas? Ext", "Band Aid", "Do They Know It's Christmas?", R.drawable.bandaid_cover, R.raw.do_they_know_its_christmas_ext);
+        song = new MusicModel("Last Christmas", "Jimmy Eat World", "Christmas EP", R.drawable.jew_lastchristmas, R.raw.last_christmas);
         musicModelList.add(song);
 
         song = new MusicModel("Thanksgiving", "George Winston", "December", R.drawable.december_cover, R.raw.thanksgiving);
@@ -68,6 +68,18 @@ public class Music_Activity extends AppCompatActivity {
         musicModelList.add(song);
 
         song = new MusicModel("Variations on the Kanon", "George Winston", "December", R.drawable.december_cover, R.raw.variations_on_the_kanon_by_pachelbel);
+        musicModelList.add(song);
+
+        song = new MusicModel("That Christmas Feeling", "Olivia Olson", "Phineas and Ferb Holiday Favorites", R.drawable.pf_holiday, R.raw.that_christmas_feeling);
+        musicModelList.add(song);
+
+        song = new MusicModel("One More Sleep 'til Christmas", "Kermit the Frog", "The Muppets Christmas Carol", R.drawable.mcc_soundtrack, R.raw.one_more_sleep);
+        musicModelList.add(song);
+
+        song = new MusicModel("Green Chri$tma$", "Stan Freberg", "The Meaning of Christmas", R.drawable.freeberg_gc, R.raw.green_christmas);
+        musicModelList.add(song);
+
+        song = new MusicModel("Twelve Days of Christmas", "Bob & Doug McKenzie", "Twelve Days of Christmas", R.drawable.bdmc_twlevedays, R.raw.bdmc_tdofc);
         musicModelList.add(song);
     }
 }
