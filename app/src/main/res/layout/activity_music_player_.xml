@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorXMasRed"
+    android:background="@color/colorXMasSilver"
     tools:context=".activities.MusicPlayer_Activity">
 
     <ImageView
@@ -32,7 +32,7 @@
         android:id="@+id/timeElapsed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorXMasGreen"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/musicPlayerSeekBar"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -42,7 +42,7 @@
         android:id="@+id/timeRemaining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorXMasGreen"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/musicPlayerSeekBar"
         app:layout_constraintRight_toRightOf="parent"
@@ -56,7 +56,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="40dp"
-        android:background="@drawable/greenplay"/>
+        android:background="@drawable/greenplaybutton"/>
 
     <SeekBar
         android:id="@+id/musicPlayerVolumeBar"

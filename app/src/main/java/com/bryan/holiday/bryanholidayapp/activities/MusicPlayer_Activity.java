@@ -65,10 +65,10 @@ public class MusicPlayer_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!mediaPlayer.isPlaying()) {
                     mediaPlayer.start();
-                    musicPlayerPlayButton.setBackgroundResource(R.drawable.greenpause);
+                    musicPlayerPlayButton.setBackgroundResource(R.drawable.greenpausebutton);
                 } else {
                     mediaPlayer.pause();
-                    musicPlayerPlayButton.setBackgroundResource(R.drawable.greenplay);
+                    musicPlayerPlayButton.setBackgroundResource(R.drawable.greenplaybutton);
                 }
             }
         });
