@@ -155,7 +155,7 @@ public class MusicPlayer_Activity extends AppCompatActivity {
         int min = time / 1000 / 60;
         int sec = time / 1000 % 60;
 
-        timeLabel = min + " : ";
+        timeLabel = min + ":";
         if (sec < 10) {
             timeLabel += "0";
         }

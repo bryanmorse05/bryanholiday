@@ -14,9 +14,11 @@
 
     <Button
         android:id="@+id/videoButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:text="Videos"
+        android:textSize="20sp"
+        android:textStyle="italic"
         android:background="@drawable/snowflake"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@id/yuleLogButton"
@@ -26,9 +28,11 @@
 
     <Button
         android:id="@+id/musicButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:text="Music"
+        android:textSize="20sp"
+        android:textStyle="italic"
         android:background="@drawable/snowflake"
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,24 +42,28 @@
 
     <Button
         android:id="@+id/yuleLogButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="Yule Log"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:text="Yule         Log"
+        android:textSize="20sp"
+        android:textStyle="italic"
         android:background="@drawable/snowflake"
         android:scaleType="fitXY"
-        app:layout_constraintTop_toBottomOf="@id/videoButton"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/soundBoardButton"/>
 
     <Button
         android:id="@+id/soundBoardButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:text="Sound Board"
+        android:textSize="20sp"
+        android:textStyle="italic"
         android:background="@drawable/snowflake"
         android:scaleType="fitXY"
-        app:layout_constraintTop_toBottomOf="@id/musicButton"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/yuleLogButton"
         app:layout_constraintRight_toRightOf="parent"/>
